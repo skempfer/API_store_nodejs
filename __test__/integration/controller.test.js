@@ -138,3 +138,25 @@ describe('getProduct', () => {
     });
 });
 
+describe('updateProduct',() => {    
+    it('should be possible to edit a product by sku', async () => {        
+       const updatedProduct = {            
+           sku: products[0].sku,
+           name: 'Creme de tratamento',
+           inventory: products[0].inventory           
+       };
+       
+       const responseUpdate = await request(app)
+           .put(`/product/${products[0].sku}`)
+           .send(updatedProduct);
+           
+       expect(responseUpdate.status).toBe(200);
+   });
+
+   it('should not be possible to update a product that does not exist', async () => {
+       await request(app)
+           .put('/product/19383478493');          
+           expect(400);        
+   });
+
+});
