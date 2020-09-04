@@ -1,0 +1,27 @@
+{
+  "name": "api_store_nodejs",
+  "version": "0.0.1",
+  "description": "Aplicação para gerenciamento de produtos ",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "start": "node ./src/index.js",
+    "dev": "nodemon src/index.js --ignore __tests__"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/skempfer/API_store_nodejs.git"
+  },
+  "author": "Ana Kempfer",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/skempfer/API_store_nodejs/issues"
+  },
+  "homepage": "https://github.com/skempfer/API_store_nodejs#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "jest": "^26.4.2",
+    "nodemon": "^2.0.4",
+    "supertest": "^4.0.2"
+  }
+}
